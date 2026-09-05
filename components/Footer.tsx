@@ -4,8 +4,11 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-24">
         <div className="grid md:grid-cols-12 gap-10 items-end">
           <div className="md:col-span-8 js-reveal">
-            <div className="font-display italic tracking-tightest leading-[0.9] text-[18vw] md:text-[13vw] lg:text-[11rem]">
-              Frank<span className="text-signal">.</span>
+            <div className="font-display tracking-tightest leading-[0.85] text-[15vw] md:text-[10vw] lg:text-[8.5rem]">
+              <span className="block text-bone/90">Francis</span>
+              <span className="block italic text-bone/45">
+                Dippenaar<span className="text-signal not-italic">.</span>
+              </span>
             </div>
           </div>
           <div className="md:col-span-4 space-y-4 text-sm text-bone/60 js-reveal">

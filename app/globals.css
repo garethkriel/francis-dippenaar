@@ -39,13 +39,32 @@ body {
 .marquee-track { animation: marquee 40s linear infinite; }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 
-/* Grid noise overlay */
+/* Film grain — sits over photography to disguise low-resolution sources
+   and give the imagery a deliberate editorial texture. */
+.grain {
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.13;
+  mix-blend-mode: overlay;
+}
+
+/* Legacy alias */
 .noise::before {
   content: '';
   position: absolute; inset: 0; pointer-events: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/></svg>");
   opacity: 0.05; mix-blend-mode: overlay;
 }
+
+/* Section heading kicker underline sweep */
+.link-sweep {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.link-sweep:hover { background-size: 100% 1px; }
 
 /* Focus ring */
 :focus-visible {

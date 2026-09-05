@@ -6,8 +6,8 @@ export default function Contact() {
           <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-signal">
             <span className="h-px w-6 bg-signal" /> Book
           </span>
-          <h2 className="mt-6 font-display tracking-tightest leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
-            Let's<br /><span className="italic text-signal">get to work.</span>
+          <h2 className="mt-6 font-display tracking-tightest leading-[0.92] text-6xl md:text-7xl lg:text-8xl">
+            Start<br /><span className="italic text-signal">this week.</span>
           </h2>
           <p className="mt-8 text-bone/70 text-lg leading-relaxed max-w-lg">
             The fastest way in is WhatsApp — I read every message and reply in the evenings.
@@ -63,10 +63,16 @@ export default function Contact() {
 
             <div className="mt-8 aspect-video rounded-sm overflow-hidden border border-bone/10 bg-ink">
               <iframe
-                title="Virgin Active Kimberley — map"
+                title="Map showing Virgin Active Kimberley"
                 src="https://www.google.com/maps?q=Virgin+Active+Kimberley&output=embed"
                 loading="lazy"
-                className="w-full h-full grayscale contrast-125"
+                // Third-party frame: give it the minimum it needs to render a map
+                // and nothing else. No form submission, no top-level navigation,
+                // no downloads, no pointer lock.
+                sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                referrerPolicy="no-referrer-when-downgrade"
+                allow="geolocation 'none'; camera 'none'; microphone 'none'"
+                className="w-full h-full grayscale contrast-125 transition-all duration-700 hover:grayscale-0"
               />
             </div>
 

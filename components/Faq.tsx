@@ -38,11 +38,11 @@ export default function Faq() {
           <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-signal">
             <span className="h-px w-6 bg-signal" /> FAQ
           </span>
-          <h2 className="mt-6 font-display tracking-tightest leading-[1.0] text-5xl md:text-6xl">
-            Frankly<br /><span className="italic text-bone/80">asked.</span>
+          <h2 className="mt-6 font-display tracking-tightest leading-[0.95] text-5xl md:text-6xl">
+            Common<br /><span className="italic text-bone/70">questions.</span>
           </h2>
-          <p className="mt-6 text-bone/60 leading-relaxed">
-            Anything I've missed? WhatsApp me directly — I answer in the evenings.
+          <p className="mt-6 text-bone/55 leading-relaxed">
+            Anything I&rsquo;ve missed? WhatsApp me directly &mdash; I answer in the evenings.
           </p>
         </div>
 
